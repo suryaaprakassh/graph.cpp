@@ -4,12 +4,17 @@
 using namespace std;
 int main() {
 
-  Graph *g = new Graph(2);
+  Graph *g = new Graph(6);
 
-  g->addEdge(0, 1);
-  g->addEdge(1, 0);
+  g->addEdge(5, 0);
+  g->addEdge(4, 0);
+  g->addEdge(5, 2);
+  g->addEdge(4, 1);
+  g->addEdge(2, 3);
+  g->addEdge(3, 1);
 
-  g->print_bridges();
+  g->printGraph();
 
-  return 0;
+  g->print_topological();
+  g->print_khan();
 }
